@@ -1,0 +1,58 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="dark">
+    <ion-title id="titulo">Chill-Eats</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <ion-card class="auth-card" *ngIf="segment === 'login'">
+      <ion-card-header>
+        <ion-card-title>Iniciar Sesión</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-input placeholder="Correo Electrónico" type="email"></ion-input>
+        <ion-input type="password" placeholder="Contraseña"></ion-input>
+        <ion-button expand="full">Iniciar Sesión</ion-button>
+        <p>¿No tienes cuenta? <a href="javascript:void(0)" (click)="switchToRegister($event)">Regístrate</a></p>
+      </ion-card-content>
+    </ion-card>
+    <ion-card class="auth-card" *ngIf="segment === 'register'">
+      <ion-card-header>
+        <ion-card-title>Registro</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-input placeholder="Nombre" type="text"></ion-input>
+        <ion-input placeholder="Correo Electrónico" type="email"></ion-input>
+        <ion-input type="password" placeholder="Contraseña"></ion-input>
+        <ion-input type="password" placeholder="Repetir Contraseña"></ion-input>
+        <ion-button expand="full">Registrarse</ion-button>
+        <p>¿Ya tienes cuenta? <a href="javascript:void(0)" (click)="switchToLogin($event)">Inicia sesión</a></p>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>   
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button tab="Inicio" routerLink="/home">
+          <ion-icon name="home-outline"></ion-icon>
+          Inicio
+        </ion-tab-button>
+        <ion-tab-button tab="Tiendas" routerLink="/tiendas"  >
+          <ion-icon name="bag-outline" ></ion-icon>
+          Tiendas
+        </ion-tab-button>
+        <ion-tab-button tab="Cupones" routerLink="/cupones" >
+          <ion-icon name="ticket-outline" ></ion-icon>
+          Cupones 
+        </ion-tab-button>
+        <ion-tab-button tab="Perfil" routerLink="/iniciar-sesion">
+          <ion-icon name="person-outline"></ion-icon>
+          Perfil
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>

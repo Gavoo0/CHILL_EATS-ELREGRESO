@@ -23,6 +23,39 @@ const routes: Routes = [
     path: 'perfil',
     loadChildren: () => import('./perfil/perfil.module').then( m => m.PerfilPageModule)
   },
+  {
+    path: 'comida-china',
+    loadChildren: () => import('./comida-china/comida-china.module').then( m => m.ComidaChinaPageModule)
+  },
+  {
+    path: 'hamburguesa',
+    loadChildren: () => import('./hamburguesa/hamburguesa.module').then( m => m.HamburguesaPageModule)
+  },
+  {
+    path: 'pizza',
+    loadChildren: () => import('./pizza/pizza.module').then( m => m.PizzaPageModule)
+  },
+  {
+    path: 'iniciar-sesion',
+    loadChildren: () => import('./iniciar-sesion/iniciar-sesion.module').then( m => m.IniciarSesionPageModule)
+  },  {
+    path: 'cupon-1',
+    loadChildren: () => import('./cupon-1/cupon-1.module').then( m => m.Cupon1PageModule)
+  },
+  {
+    path: 'cupon-2',
+    loadChildren: () => import('./cupon-2/cupon-2.module').then( m => m.Cupon2PageModule)
+  },
+  {
+    path: 'cupon-3',
+    loadChildren: () => import('./cupon-3/cupon-3.module').then( m => m.Cupon3PageModule)
+  },
+  {
+    path: 'cupon-4',
+    loadChildren: () => import('./cupon-4/cupon-4.module').then( m => m.Cupon4PageModule)
+  },
+
+
 ];
 
 @NgModule({

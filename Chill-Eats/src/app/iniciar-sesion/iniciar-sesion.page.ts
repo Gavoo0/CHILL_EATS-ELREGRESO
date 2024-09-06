@@ -1,0 +1,24 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-iniciar-sesion',
+  templateUrl: './iniciar-sesion.page.html',
+  styleUrls: ['./iniciar-sesion.page.scss'],
+})
+export class IniciarSesionPage implements OnInit {
+  segment: string = 'login'; 
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+  switchToLogin(event: Event) {
+    event.preventDefault(); 
+    this.segment = 'login';
+  }
+
+  switchToRegister(event: Event) {
+    event.preventDefault(); 
+    this.segment = 'register';
+  }
+}
