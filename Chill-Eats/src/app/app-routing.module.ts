@@ -54,6 +54,10 @@ const routes: Routes = [
     path: 'cupon-4',
     loadChildren: () => import('./cupon-4/cupon-4.module').then( m => m.Cupon4PageModule)
   },
+  {
+    path: 'carrito',
+    loadChildren: () => import('./carrito/carrito.module').then( m => m.CarritoPageModule)
+  },
 
 
 ];
