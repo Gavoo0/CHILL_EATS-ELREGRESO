@@ -26,7 +26,7 @@ export class CuponesPage implements OnInit {
         .easing('ease-out')
         .fromTo('opacity', '0', '1')
         .fromTo('transform', 'translateY(50px)', 'translateY(0)')
-        .delay(index * 200);
+        .delay(index * 300);
   
       this.animation.play();
     });
