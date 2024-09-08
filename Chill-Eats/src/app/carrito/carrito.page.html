@@ -1,5 +1,8 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-back-button default-href="#"></ion-back-button>
+    </ion-buttons>
     <ion-title id="titulo">
       Chill-Eats
     </ion-title>
@@ -27,7 +30,7 @@
           <ion-label>Hamburgesa clasica: $500</ion-label>
         </ion-item>
       </ion-card-content>
-      <ion-button (click)="presentAlert()">Comprar Ya</ion-button>
+      <ion-button (click)="presentAlert()" (click)="ejecutar()">Comprar Ya</ion-button>
     </ion-card>
   </div>
 
@@ -38,11 +41,8 @@
   </div>
 
   <div class="texto">
-    <ion-input> Tu pedido llegará en unos momentos...</ion-input>
+    <p> Tu pedido llegará en unos momentos...</p>
     
-  </div>
-  <div class="boton">
-    <ion-button color="danger" (click)="ejecutar()" class="center-button">Esperar pedido</ion-button>
   </div>
 
 

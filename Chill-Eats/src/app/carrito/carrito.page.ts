@@ -25,7 +25,7 @@ export class CarritoPage implements OnInit {
   ngAfterViewInit(){
     const moveAnimation = this.animationController.create()
     .addElement(document.querySelector('.moto') as HTMLElement)
-    .duration(2000)
+    .duration(2200)
     .iterations(Infinity) 
     .fromTo('transform','translateX(-300px)','translateX(600px)')
 
