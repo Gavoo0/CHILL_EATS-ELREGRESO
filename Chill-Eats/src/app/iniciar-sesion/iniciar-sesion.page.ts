@@ -54,7 +54,7 @@ export class IniciarSesionPage implements OnInit {
           address: user.address
         }
       };
-      this.navController.navigateForward(['/perfil'], navigationExtras);
+      this.navController.navigateForward(['/home'], navigationExtras);
     } else {
       alert('Correo electrónico o contraseña incorrectos');
     }

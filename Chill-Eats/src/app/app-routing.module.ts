@@ -3,12 +3,12 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'home',
+    path: 'iniciar-sesion',
     loadChildren: () => import('./iniciar-sesion/iniciar-sesion.module').then( m => m.IniciarSesionPageModule)
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'iniciar-sesion',
     pathMatch: 'full'
   },
   {
@@ -36,7 +36,7 @@ const routes: Routes = [
     loadChildren: () => import('./pizza/pizza.module').then( m => m.PizzaPageModule)
   },
   {
-    path: 'iniciar-sesion',
+    path: 'home',
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   },
   {
