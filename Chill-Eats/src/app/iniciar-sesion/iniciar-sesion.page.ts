@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { NavigationExtras } from '@angular/router';
-
+import { AlertController } from '@ionic/angular';
 @Component({
   selector: 'app-iniciar-sesion',
   templateUrl: './iniciar-sesion.page.html',
@@ -9,7 +9,7 @@ import { NavigationExtras } from '@angular/router';
 })
 export class IniciarSesionPage implements OnInit {
 
-  constructor(private navController: NavController) { }
+  constructor(private navController: NavController,private alertController: AlertController) { }
 
   segment: string = 'login'; 
   email: string = '';
@@ -33,6 +33,15 @@ export class IniciarSesionPage implements OnInit {
 
   ngOnInit() {}
 
+  async presentAlert() {
+    const alert = await this.alertController.create({
+      header: 'Bienvenido '||this.users[2],
+      buttons: ['Salir'],
+    });
+
+    await alert.present();
+  }
+  
   switchToLogin(event: Event) {
     event.preventDefault(); 
     this.segment = 'login';

@@ -13,7 +13,7 @@
       <ion-card-content>
         <ion-input placeholder="Correo Electrónico" type="email" [(ngModel)]="email"></ion-input>
         <ion-input type="password" placeholder="Contraseña" [(ngModel)]="password"></ion-input>
-        <ion-button expand="full" (click)="login()">Iniciar Sesión</ion-button>
+        <ion-button expand="full" (click)="login()" (click)="presentAlert()">Iniciar Sesión</ion-button>
         <p>¿No tienes cuenta? <a href="javascript:void(0)" (click)="switchToRegister($event)">Regístrate</a></p>
       </ion-card-content>
     </ion-card>
