@@ -35,7 +35,7 @@ export class IniciarSesionPage implements OnInit {
 
   async presentAlert() {
     const alert = await this.alertController.create({
-      header: 'Bienvenido '||this.users[2],
+      header: `Bienvenido ${this.users}`,
       buttons: ['Salir'],
     });
 
