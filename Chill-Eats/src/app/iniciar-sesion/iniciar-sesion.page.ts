@@ -34,8 +34,9 @@ export class IniciarSesionPage implements OnInit {
   ngOnInit() {}
 
   async presentAlert() {
+    const usuario = this.users.find(user => user.email === 'ejemplo@ejemplo.com');
     const alert = await this.alertController.create({
-      header: `Bienvenido ${this.users}`,
+      header: `Bienvenido ${usuario?.fullName}`,
       buttons: ['Salir'],
     });
 
